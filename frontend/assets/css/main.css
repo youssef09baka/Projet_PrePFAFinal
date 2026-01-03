@@ -1,0 +1,271 @@
+/* ==========================================================
+   GLOBAL
+========================================================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding-top: 56px;
+  background-color: #f1f5f9;
+  color: #1f2937;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+section,
+.container {
+  background-color: transparent;
+}
+
+
+/* ==========================================================
+   HERO (INDEX)
+========================================================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    center / cover no-repeat;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* ==========================================================
+   CARTES & COMPOSANTS
+========================================================== */
+.feature-card,
+.testimonial-card,
+.planner-box,
+.planner-result,
+.team-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover,
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-card {
+  padding: 25px;
+}
+
+.list-check li {
+  list-style: "✔  ";
+  margin-left: 1em;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+
+/* ==========================================================
+   PLANNER PAGE
+========================================================== */
+.planner-hero {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 0.6s ease-in-out;
+}
+
+.planner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.planner-hero h2 {
+  color: #fff;
+}
+
+.planner-hero .card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+.result-placeholder {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #888;
+}
+
+
+/* ==========================================================
+   ABOUT PAGE
+========================================================== */
+.about-hero {
+  position: relative;
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+    center / cover no-repeat;
+}
+
+.about-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* ==========================================================
+   BACKGROUNDS PAR VILLE (PLANNER)
+========================================================== */
+.bg-casa { background-image: url("../img/cities/casa.jpg"); }
+.bg-rabat { background-image: url("../img/cities/rabat.jpg"); }
+.bg-marrakech { background-image: url("../img/cities/marrakech.jpg"); }
+.bg-fes { background-image: url("../img/cities/fes.jpg"); }
+.bg-tanger { background-image: url("../img/cities/tanger.jpg"); }
+.bg-agadir { background-image: url("../img/cities/agadir.jpg"); }
+.bg-tetouan { background-image: url("../img/cities/tetouan.jpg"); }
+.bg-kenitra { background-image: url("../img/cities/kenitra.jpg"); }
+
+
+/* ==========================================================
+   ANIMATION FORMULAIRE
+========================================================== */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================
+   PAGE LOADER
+========================================================== */
+#pageLoader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+#pageLoader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ==========================================================
+   CAROUSEL (INDEX)
+========================================================== */
+.carousel-item img {
+  height: 420px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE (MOBILE)
+========================================================== */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  h1, .display-4 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, .lead {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .hero,
+  .about-hero,
+  .planner-hero {
+    height: auto;
+    padding: 90px 0 70px;
+  }
+
+  .hero-content {
+    top: 0;
+    transform: none;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .team-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
